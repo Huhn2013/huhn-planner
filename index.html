@@ -1,34 +1,51 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Veranstaltungen</title>
+    <title>Event Planner</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Huhn Planner</h1>
-    <form id="eventForm">
-        <label for="title">Event:</label>
-        <input type="text" id="title" name="title"><br><br>
+    <header>
+        <h1>Event Planner</h1>
+        <div id="user-section">
+            <span id="username">huhn-planner_user</span>
+            <button id="change-username">Change Username</button>
+        </div>
+    </header>
+    <main>
+        <section id="event-section">
+            <h2>Add Event</h2>
+            <form id="eventForm">
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title" required><br><br>
 
-        <label for="description">Desciption:</label>
-        <input type="text" id="description" name="description"><br><br>
+                <label for="description">Description:</label>
+                <input type="text" id="description" name="description" required><br><br>
 
-        <label for="host">Hosted by:</label>
-        <input type="text" id="host" name="host"><br><br>
+                <label for="host">Host:</label>
+                <input type="text" id="host" name="host" required><br><br>
 
-        <label for="isPublic">Public:</label>
-        <input type="checkbox" id="isPublic" name="isPublic"><br><br>
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" required><br><br>
 
-        <label for="allowedUsers">Allowed Users:</label>
-        <input type="text" id="allowedUsers" name="allowedUsers"><br><br>
+                <label for="isPublic">Public:</label>
+                <input type="checkbox" id="isPublic" name="isPublic"><br><br>
 
-        <button type="submit">Save</button>
-    </form>
+                <label for="allowedUsers">Allowed Users (for private events):</label>
+                <input type="text" id="allowedUsers" name="allowedUsers"><br><br>
 
-    <h1>Events</h1>
-    <div id="eventsList"></div>
-
+                <button type="submit">Save</button>
+            </form>
+        </section>
+        <section id="tabs">
+            <button id="fyp-tab">For You Page</button>
+            <button id="search-tab">Search</button>
+            <button id="favorites-tab">Favorites</button>
+        </section>
+        <section id="eventsList"></section>
+    </main>
     <script src="script.js"></script>
 </body>
 </html>
