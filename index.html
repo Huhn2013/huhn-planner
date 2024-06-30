@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veranstaltungen</title>
+</head>
+<body>
+    <h1>Huhn Planner</h1>
+    <form id="eventForm">
+        <label for="title">Event:</label>
+        <input type="text" id="title" name="title"><br><br>
+
+        <label for="description">Desciption:</label>
+        <input type="text" id="description" name="description"><br><br>
+
+        <label for="host">Hosted by:</label>
+        <input type="text" id="host" name="host"><br><br>
+
+        <label for="isPublic">Public:</label>
+        <input type="checkbox" id="isPublic" name="isPublic"><br><br>
+
+        <label for="allowedUsers">Allowed Users:</label>
+        <input type="text" id="allowedUsers" name="allowedUsers"><br><br>
+
+        <button type="submit">Save</button>
+    </form>
+
+    <h1>Events</h1>
+    <div id="eventsList"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
