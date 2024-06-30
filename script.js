@@ -1,3 +1,6 @@
+let username = localStorage.getItem('username') || 'huhn-planner_user';
+document.getElementById('username').textContent = username;
+
 document.getElementById('eventForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
@@ -15,7 +18,8 @@ document.getElementById('eventForm').addEventListener('submit', function(event) 
         host,
         location,
         isPublic,
-        allowedUsers
+        allowedUsers,
+        creator: username
     };
 
     let events = JSON.parse(localStorage.getItem('events')) || [];
@@ -41,7 +45,9 @@ document.getElementById('favorites-tab').addEventListener('click', function() {
 document.getElementById('change-username').addEventListener('click', function() {
     const newUsername = prompt('Enter new username:');
     if (newUsername) {
-        document.getElementById('username').textContent = newUsername;
+        username = newUsername;
+        localStorage.setItem('username', username);
+        document.getElementById('username').textContent = username;
     }
 });
 
@@ -77,7 +83,7 @@ function displayEvents(tab = 'all') {
             <p>Location: ${event.location}</p>
             <p>Public: ${event.isPublic ? 'Yes' : 'No'}</p>
             ${event.isPublic ? '' : `<p>Allowed Users: ${event.allowedUsers.join(', ')}</p>`}
-            <button onclick="deleteEvent(${event.id})">Delete</button>
+            ${event.creator === username ? `<button onclick="deleteEvent(${event.id})">Delete</button>` : ''}
         `;
         eventsList.appendChild(eventDiv);
     });
