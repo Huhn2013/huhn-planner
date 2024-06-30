@@ -7,41 +7,49 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Event Planner</h1>
-        <div>
-            <span id="username">huhn-planner_user</span>
-            <button id="change-username">Change Username</button>
+    <h1>Event Planner</h1>
+    <div id="username-change">
+        <button id="change-username-button">Change Username</button>
+    </div>
+    <div>
+        <button onclick="showTab('fyp')">For You Page</button>
+        <button onclick="showTab('search')">Search</button>
+        <button onclick="showTab('favorites')">Favorites</button>
+    </div>
+    <div id="tab-content">
+        <div id="fyp" class="tab active">
+            <h2>For You Page</h2>
+            <div id="events-list"></div>
         </div>
-    </header>
-    
-    <main>
-        <section>
-            <h2>Add New Event</h2>
-            <form id="eventForm">
-                <input type="text" id="title" placeholder="Title" required>
-                <textarea id="description" placeholder="Description" required></textarea>
-                <input type="text" id="host" placeholder="Host" required>
-                <input type="text" id="location" placeholder="Location" required>
-                <label>
-                    <input type="checkbox" id="isPublic"> Public
-                </label>
-                <input type="text" id="allowedUsers" placeholder="Allowed Users (comma separated)">
-                <button type="submit">Add Event</button>
-            </form>
-        </section>
-
-        <section>
-            <div class="tabs">
-                <button id="fyp-tab">For You Page</button>
-                <button id="search-tab">Search</button>
-                <button id="favorites-tab">Favorites</button>
-                <button id="nearby-tab">Nearby</button>
-            </div>
-            <div id="eventsList"></div>
-        </section>
-    </main>
-
+        <div id="search" class="tab">
+            <h2>Search</h2>
+            <input type="text" id="search-input" placeholder="Search for events">
+            <div id="search-results"></div>
+        </div>
+        <div id="favorites" class="tab">
+            <h2>Favorites</h2>
+            <div id="favorites-list"></div>
+        </div>
+    </div>
+    <div>
+        <h2>Add Event</h2>
+        <form id="event-form">
+            <input type="text" id="event-name" placeholder="Event Name" required>
+            <input type="text" id="event-host" placeholder="Host" required>
+            <input type="text" id="event-location" placeholder="Location" required>
+            <textarea id="event-description" placeholder="Description" required></textarea>
+            <label>
+                Public:
+                <input type="checkbox" id="event-public">
+            </label>
+            <button type="submit">Add Event</button>
+        </form>
+    </div>
+    <div id="admin-section">
+        <h2>Admin Section</h2>
+        <input type="text" id="delete-event-id" placeholder="Event ID to delete">
+        <button onclick="deleteEventById()">Delete Event by ID</button>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
