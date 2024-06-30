@@ -2,114 +2,66 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     color: #333;
-    margin: 0;
-    padding: 0;
 }
 
-header {
-    background-color: #444;
-    color: white;
-    padding: 1em;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+h1 {
+    color: #cc0000;
 }
 
-header h1 {
-    margin: 0;
+#username-change {
+    text-align: right;
 }
 
-header div {
-    display: flex;
-    align-items: center;
-}
-
-header button {
-    margin-left: 1em;
-    padding: 0.5em 1em;
-    background-color: #ff0000;
+#username-change button {
+    background-color: #cc0000;
     color: white;
     border: none;
+    padding: 5px 10px;
     cursor: pointer;
-    border-radius: 5px;
 }
 
-header button:hover {
+#username-change button:hover {
+    background-color: #a30000;
+}
+
+.tab {
+    display: none;
+}
+
+.tab.active {
+    display: block;
+}
+
+#tab-content {
+    margin: 20px 0;
+}
+
+button {
     background-color: #cc0000;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    margin: 5px 0;
 }
 
-main {
-    padding: 1em;
+button:hover {
+    background-color: #a30000;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-form input, form textarea {
-    margin-bottom: 1em;
-    padding: 0.5em;
+#event-form input, #event-form textarea {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 5px;
 }
 
-form button {
-    padding: 0.5em;
-    background-color: #ff0000;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
+#admin-section {
+    margin-top: 20px;
 }
 
-form button:hover {
-    background-color: #cc0000;
-}
-
-.tabs {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 1em;
-}
-
-.tabs button {
-    flex: 1;
-    padding: 1em;
-    background-color: #777;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    margin: 0 0.5em;
-}
-
-.tabs button:hover {
-    background-color: #555;
-}
-
-.event {
-    background-color: white;
-    padding: 1em;
-    margin-bottom: 1em;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-.event h2 {
-    margin-top: 0;
-}
-
-.event button {
-    padding: 0.5em 1em;
-    background-color: #ff0000;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-top: 0.5em;
-}
-
-.event button:hover {
-    background-color: #cc0000;
+#admin-section input {
+    padding: 5px;
+    margin-right: 10px;
 }
