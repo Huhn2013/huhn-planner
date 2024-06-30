@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #d32f2f;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+#user-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#user-section button {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+#user-section button:hover {
+    background-color: #eee;
+}
+
+main {
+    padding: 20px;
+}
+
+h1, h2 {
+    color: #d32f2f;
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"], input[type="checkbox"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    background-color: #d32f2f;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #c62828;
+}
+
+#tabs {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#tabs button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#tabs button:hover {
+    background-color: #ccc;
+}
+
+#eventsList {
+    margin-top: 20px;
+}
